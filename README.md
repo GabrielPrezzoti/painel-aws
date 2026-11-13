@@ -4,27 +4,12 @@ Painel estático do estudo de caso do TCC, feito em HTML, CSS e JavaScript. Exib
 
 ## Executar localmente
 
-No Windows, instale o Git e o Node.js com npm. Aceite o convite para o repositório privado e execute no PowerShell:
-
-```powershell
-git clone https://github.com/GabrielPrezzoti/painel-aws.git
+Node.js com npm. 
 cd painel-aws
 npx.cmd --yes http-server . -a 127.0.0.1 -p 8080 -c-1
 ```
 
-Se já tiver clonado o repositório, abra a pasta `painel-aws` e execute apenas o comando `npx.cmd`. Deixe o terminal aberto e acesse [http://127.0.0.1:8080](http://127.0.0.1:8080). O parâmetro `-c-1` desativa o cache. Salve suas alterações e recarregue a página para vê-las. Para parar o servidor, pressione `Ctrl+C`.
-
-O clone inclui as alterações enviadas ao GitHub. Sem o arquivo `metrics.json`, o painel exibe dados simulados e funciona sem configurar a AWS.
-
-### Executar com Python
-
-Se já tiver Python instalado, também pode iniciar o servidor na pasta do projeto:
-
-```sh
-python -m http.server 8000 --bind 127.0.0.1
-```
-
-Abra [http://127.0.0.1:8000](http://127.0.0.1:8000).
+ [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
 ## Dados do CloudWatch
 
