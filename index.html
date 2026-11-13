@@ -3,53 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Painel AWS | TCC</title>
+  <meta name="description" content="Estudo de caso da Fatec São Paulo sobre critérios de decisão na migração de servidores para a nuvem.">
+  <title>Migração para a nuvem | TCC Fatec São Paulo</title>
   <link rel="stylesheet" href="style.css">
-  <script type="module" src="app.js"></script>
 </head>
-<body>
+<body class="landing">
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
   <header class="top">
-    <div class="shell brand"><span class="mark" aria-hidden="true">▥</span> Painel AWS <span class="tag">TCC</span></div>
+    <nav class="shell site-nav" aria-label="Navegação principal">
+      <a class="brand" href="./" aria-current="page"><span class="brand-icon" aria-hidden="true"></span> TCC <span class="tag">Fatec São Paulo</span></a>
+      <a class="nav-link" href="painel.html">Monitoramento <span aria-hidden="true">↗</span></a>
+    </nav>
   </header>
-  <main class="shell">
-    <section class="intro">
-      <div>
-        <p class="eyebrow">ESTUDO DE CASO</p>
-        <h1>Monitoramento da instância</h1>
-        <p class="muted">Acompanhe a utilização de recursos e o tráfego da instância EC2.</p>
+  <main id="conteudo" class="shell home">
+    <section class="hero" aria-labelledby="titulo">
+      <div class="hero-copy">
+        <p class="eyebrow">Trabalho de conclusão de curso · 2026</p>
+        <h1 id="titulo">Migração de servidores <em>on-premises</em> para a nuvem</h1>
+        <p class="subtitle">Critérios de decisão, vantagens e momento oportuno</p>
+        <div class="actions">
+          <a class="action primary" href="painel.html">Abrir painel de monitoramento <span aria-hidden="true">↗</span></a>
+          <a class="action secondary" href="#sobre">Entender o projeto <span aria-hidden="true">↓</span></a>
+        </div>
       </div>
-      <button id="refresh" type="button">Atualizar dados</button>
+      <aside class="case-flow" aria-labelledby="fluxo">
+        <h2 id="fluxo">Como as métricas chegam ao painel</h2>
+        <ol>
+          <li><span class="flow-dot"></span><div><strong>Amazon EC2</strong><span>Instância do estudo de caso</span></div></li>
+          <li><span class="flow-dot"></span><div><strong>Amazon CloudWatch</strong><span>Coleta das métricas da instância</span></div></li>
+          <li><span class="flow-dot"></span><div><strong>Painel de monitoramento</strong><span>Gráficos de utilização e tráfego</span></div></li>
+        </ol>
+      </aside>
     </section>
-    <section class="toolbar" aria-label="Dados do painel">
+    <section id="sobre" class="about" aria-labelledby="sobre-titulo">
       <div>
-        <strong id="source">Carregando métricas</strong>
-        <p id="status" class="muted" role="status"></p>
+        <p class="eyebrow">Sobre o projeto</p>
+        <h2 id="sobre-titulo">Quando vale a pena migrar?</h2>
+        <p>O TCC compara a infraestrutura local e a nuvem pública para entender quando a migração se justifica. A análise considera custos, desempenho e operação.</p>
+        <p>O painel é a aplicação do estudo de caso. Ele reúne métricas da instância AWS para ajudar a avaliar a implantação.</p>
+        <a class="text-link" href="https://docs.google.com/document/d/1sGRUZgOIMaoTUIHKL_OSJMAL-iMtOmjonwfpcn5lpgo/edit">Ler o TCC no Google Docs <span aria-hidden="true">↗</span></a>
       </div>
-      <label for="window">Período
-        <select id="window">
-          <option value="1">Última hora</option>
-          <option value="6" selected>Últimas 6 horas</option>
-          <option value="24">Últimas 24 horas</option>
-        </select>
-      </label>
+      <dl class="credits">
+        <div><dt>Integrantes</dt><dd>Gabriel Barros Prezzoti<br>Rennan Ventura Alves</dd></div>
+        <div><dt>Orientador</dt><dd>Prof. Paulo Roberto Bernice</dd></div>
+        <div><dt>Curso</dt><dd>Análise e Desenvolvimento de Sistemas</dd></div>
+      </dl>
     </section>
-    <section id="metrics" class="grid" aria-label="Métricas da instância"></section>
-    <noscript>Ative o JavaScript para visualizar as métricas.</noscript>
   </main>
-  <template id="metric">
-    <article class="card">
-      <h2></h2>
-      <p class="value"></p>
-      <p class="summary muted"></p>
-      <canvas aria-hidden="true" width="600" height="145"></canvas>
-      <div class="axis muted" aria-hidden="true"><span></span><span></span></div>
-      <details><summary>Ver amostras</summary>
-        <table>
-          <thead><tr><th scope="col">Horário</th><th scope="col">Valor</th></tr></thead>
-          <tbody></tbody>
-        </table>
-      </details>
-    </article>
-  </template>
+  <footer class="shell site-footer">Faculdade de Tecnologia de São Paulo · 2026</footer>
 </body>
 </html>

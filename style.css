@@ -44,3 +44,122 @@ th, td { text-align: left; padding: 6px 4px; border-bottom: 1px solid var(--bord
   .grid { grid-template-columns: 1fr; }
   main { padding-top: 22px; }
 }
+
+/* Identidade do estudo de caso e navegação compartilhada. */
+:root {
+  background: #0a121a;
+  color: #f1f5f4;
+  --surface: #111e29;
+  --border: #2c404e;
+  --muted: #adbfcb;
+  --accent: #82ebc4;
+}
+.top { background: #0d1720; }
+.site-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.brand { text-decoration: none; color: inherit; }
+.brand-icon {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+  background: linear-gradient(135deg, transparent 43%, var(--accent) 44% 53%, transparent 54%);
+}
+.nav-link, .text-link { color: var(--accent); text-underline-offset: 4px; }
+.nav-link { text-decoration: none; font-size: .875rem; }
+.nav-link:hover { text-decoration: underline; }
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 10px;
+  background: var(--accent);
+  color: #0a211a;
+  transform: translateY(-150%);
+}
+.skip-link:focus { transform: none; }
+.landing {
+  background: radial-gradient(ellipse at 95% 5%, #142e31 0%, transparent 50%), #0a121a;
+}
+.home { padding-block: 0; }
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(250px, 1fr);
+  gap: clamp(28px, 5vw, 76px);
+  align-items: center;
+  padding-block: clamp(45px, 9vw, 116px);
+}
+.hero .eyebrow, .about .eyebrow { text-transform: uppercase; line-height: 1.5; }
+.hero h1 {
+  font-size: clamp(2.45rem, 6vw, 5.1rem);
+  line-height: 1.01;
+  letter-spacing: -.062em;
+  margin-block: 18px;
+}
+.hero h1 em { color: var(--accent); font-style: normal; }
+.subtitle { color: var(--muted); font-size: clamp(1rem, 2vw, 1.25rem); line-height: 1.5; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: .9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.primary { background: var(--accent); color: #0a211a; border-color: transparent; }
+.primary:hover { background: #b0f7df; }
+.secondary { color: inherit; background: var(--surface); }
+.secondary:hover { border-color: var(--accent); }
+.case-flow {
+  background: linear-gradient(155deg, #172c34, var(--surface) 75%);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: clamp(18px, 3vw, 30px);
+}
+.case-flow h2 { font-size: 1rem; }
+.case-flow ol { list-style: none; padding: 0; margin: 20px 0 0; }
+.case-flow li { position: relative; display: flex; align-items: center; gap: 14px; }
+.case-flow li + li { margin-top: 18px; }
+.case-flow li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: calc(50% + 8px);
+  left: 6px;
+  height: calc(100% + 2px);
+  border-left: 1px dashed #668383;
+}
+.flow-dot { flex: 0 0 13px; height: 13px; border: 2px solid var(--accent); border-radius: 50%; }
+.case-flow li div { border: 1px solid var(--border); border-radius: 8px; padding: 10px; flex: 1; }
+.case-flow li div span { display: block; color: var(--muted); font-size: .8rem; margin-top: 4px; }
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(240px, 1fr);
+  gap: clamp(22px, 5vw, 76px);
+  border-top: 1px solid var(--border);
+  padding-block: 34px 50px;
+}
+.about h2 { font-size: clamp(1.65rem, 3vw, 2.25rem); letter-spacing: -.035em; }
+.about p:not(.eyebrow) { color: var(--muted); line-height: 1.6; max-width: 58ch; }
+.credits { margin: 0; padding: 18px 22px; border-left: 1px solid var(--border); }
+.credits div + div { margin-top: 14px; }
+.credits dt { color: var(--muted); font-size: .78rem; }
+.credits dd { margin: 4px 0 0; line-height: 1.5; }
+.site-footer { padding-block: 18px 25px; border-top: 1px solid var(--border); color: var(--muted); font-size: .8rem; }
+.dashboard .toolbar { border-left: 3px solid var(--accent); }
+.dashboard .card { padding: clamp(16px, 2.4vw, 25px); }
+.dashboard .card h2 { color: var(--muted); }
+.dashboard .value { font-size: clamp(1.75rem, 4vw, 2.45rem); }
+@media (max-width: 760px) {
+  .hero, .about { grid-template-columns: 1fr; }
+  .credits { padding-block: 0; }
+}
+@media (max-width: 390px) {
+  .tag { padding-left: 7px; }
+  .brand { gap: 6px; }
+  .nav-link { font-size: .8rem; }
+}
+
