@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel AWS | TCC</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div class="shell brand"><span class="mark" aria-hidden="true">▥</span> Painel AWS <span class="tag">TCC</span></div>
+  </header>
+  <main class="shell">
+    <section class="intro">
+      <div>
+        <p class="eyebrow">ESTUDO DE CASO</p>
+        <h1>Monitoramento da instância</h1>
+        <p class="muted">Acompanhe a utilização de recursos e o tráfego da instância EC2.</p>
+      </div>
+      <button id="refresh" type="button">Atualizar dados</button>
+    </section>
+    <section class="toolbar" aria-label="Dados do painel">
+      <div>
+        <strong id="source">Carregando métricas</strong>
+        <p id="status" class="muted" role="status"></p>
+      </div>
+      <label for="window">Período
+        <select id="window">
+          <option value="1">Última hora</option>
+          <option value="6" selected>Últimas 6 horas</option>
+          <option value="24">Últimas 24 horas</option>
+        </select>
+      </label>
+    </section>
+    <section id="metrics" class="grid" aria-label="Métricas da instância"></section>
+    <noscript>Ative o JavaScript para visualizar as métricas.</noscript>
+  </main>
+  <template id="metric">
+    <article class="card">
+      <h2></h2>
+      <p class="value"></p>
+      <p class="summary muted"></p>
+      <canvas aria-hidden="true" width="600" height="145"></canvas>
+      <div class="axis muted" aria-hidden="true"><span></span><span></span></div>
+      <details><summary>Ver amostras</summary>
+        <table>
+          <thead><tr><th scope="col">Horário</th><th scope="col">Valor</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </details>
+    </article>
+  </template>
+</body>
+</html>
