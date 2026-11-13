@@ -6,34 +6,45 @@
   <meta name="description" content="Estudo de caso da Fatec São Paulo sobre critérios de decisão na migração de servidores para a nuvem.">
   <title>Migração para a nuvem | TCC Fatec São Paulo</title>
   <link rel="stylesheet" href="style.css">
+  <script type="module" src="ui.js"></script>
 </head>
 <body class="landing">
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
   <header class="top">
     <nav class="shell site-nav" aria-label="Navegação principal">
       <a class="brand" href="./" aria-current="page"><span class="brand-icon" aria-hidden="true"></span> TCC <span class="tag">Fatec São Paulo</span></a>
-      <a class="nav-link" href="painel.html">Monitoramento <span aria-hidden="true">↗</span></a>
+      <div class="nav-links"><a class="nav-link about-link" href="#sobre">O projeto</a><a class="nav-link nav-cta" href="painel.html">Monitoramento <span aria-hidden="true">↗</span></a></div>
     </nav>
   </header>
   <main id="conteudo" class="shell home">
     <section class="hero" aria-labelledby="titulo">
       <div class="hero-copy">
-        <p class="eyebrow">Trabalho de conclusão de curso · 2026</p>
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Pesquisa aplicada · TCC 2026</p>
         <h1 id="titulo">Migração de servidores <em>on-premises</em> para a nuvem</h1>
         <p class="subtitle">Critérios de decisão, vantagens e momento oportuno</p>
+        <p class="hero-description">Da infraestrutura local à AWS: um estudo de caso para transformar métricas em decisões de migração.</p>
         <div class="actions">
-          <a class="action primary" href="painel.html">Abrir painel de monitoramento <span aria-hidden="true">↗</span></a>
+          <a class="action primary" href="painel.html">Explorar monitoramento <span aria-hidden="true">↗</span></a>
           <a class="action secondary" href="#sobre">Entender o projeto <span aria-hidden="true">↓</span></a>
         </div>
+        <div class="hero-meta"><span>Amazon Web Services</span><span>Fatec São Paulo</span></div>
       </div>
       <aside class="case-flow" aria-labelledby="fluxo">
-        <h2 id="fluxo">Como as métricas chegam ao painel</h2>
+        <div class="flow-heading"><p class="eyebrow">Arquitetura do estudo</p><span class="flow-label">AWS</span></div>
+        <h2 id="fluxo">Da instância à informação.</h2>
+        <p class="flow-description">O caminho dos dados até a visualização.</p>
         <ol>
-          <li><span class="flow-dot"></span><div><strong>Amazon EC2</strong><span>Instância do estudo de caso</span></div></li>
-          <li><span class="flow-dot"></span><div><strong>Amazon CloudWatch</strong><span>Coleta das métricas da instância</span></div></li>
-          <li><span class="flow-dot"></span><div><strong>Painel de monitoramento</strong><span>Gráficos de utilização e tráfego</span></div></li>
+          <li><span class="flow-dot">01</span><div><strong>Amazon EC2</strong><span>Instância do estudo de caso</span></div></li>
+          <li><span class="flow-dot">02</span><div><strong>Amazon CloudWatch</strong><span>Coleta das métricas da instância</span></div></li>
+          <li><span class="flow-dot">03</span><div><strong>Painel de monitoramento</strong><span>Gráficos de utilização e tráfego</span></div></li>
         </ol>
+        <a class="flow-bottom" href="painel.html">Conhecer o painel <span aria-hidden="true">→</span></a>
       </aside>
+    </section>
+    <section class="pillars" aria-label="Dimensões da análise">
+      <article><span class="pillar-number">01 / CUSTOS</span><h2>Viabilidade financeira</h2><p>Custos da infraestrutura local e do modelo de consumo em nuvem.</p></article>
+      <article><span class="pillar-number">02 / DESEMPENHO</span><h2>Recursos em perspectiva</h2><p>Utilização de CPU, memória, disco e tráfego de rede da instância.</p></article>
+      <article><span class="pillar-number">03 / OPERAÇÃO</span><h2>Decisões com contexto</h2><p>Vantagens e critérios para avaliar o momento da migração.</p></article>
     </section>
     <section id="sobre" class="about" aria-labelledby="sobre-titulo">
       <div>
@@ -50,6 +61,6 @@
       </dl>
     </section>
   </main>
-  <footer class="shell site-footer">Faculdade de Tecnologia de São Paulo · 2026</footer>
+  <footer class="shell site-footer"><span>Faculdade de Tecnologia de São Paulo · 2026</span><span>Pesquisa aplicada à infraestrutura em nuvem</span></footer>
 </body>
 </html>
