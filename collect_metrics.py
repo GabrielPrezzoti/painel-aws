@@ -35,7 +35,7 @@ def build_request(instance_id, end):
                 "Id": query_id,
                 "MetricStat": {
                     "Metric": {
-                        "Namespace": "AWS/EC2",
+                        "Namespace": namespace,
                         "MetricName": name,
                         "Dimensions": [{"Name": "InstanceId", "Value": instance_id}],
                     },
@@ -43,7 +43,7 @@ def build_request(instance_id, end):
                     "Stat": statistic,
                 },
             }
-            for query_id, (_, name, statistic, _) in METRICS.items()
+            for query_id, (_, namespace, name, statistic, _) in METRICS.items()
         ],
     }
 
