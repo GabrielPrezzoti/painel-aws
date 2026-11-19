@@ -102,7 +102,7 @@ def publish_snapshot(snapshot, destination):
 
 def main():
     parser = argparse.ArgumentParser(description="Exporta métricas EC2 do CloudWatch.")
-    parser.add_argument("--instance-id", required=True, help="ID da instância EC2")
+    parser.add_argument("i-0432230f33531ee9a", required=True, help="ID da instância EC2")
     parser.add_argument("--region", default="sa-east-1", help="Região AWS da instância")
     parser.add_argument("--profile", help="Perfil opcional da AWS CLI")
     parser.add_argument(
