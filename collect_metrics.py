@@ -16,6 +16,8 @@ METRICS = {
     "cpu": ("cpu", "CPUUtilization", "Average", 1),
     "network_in": ("networkIn", "NetworkIn", "Sum", MIB),
     "network_out": ("networkOut", "NetworkOut", "Sum", MIB),
+    "memory": ("memory", "CWAgent", "mem_used_percent", "Average", 1),
+    "disk": ("disk", "CWAgent", "disk_used_percent", "Average", 1),
 }
 
 
